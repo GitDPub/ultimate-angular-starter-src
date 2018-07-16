@@ -5,7 +5,17 @@ function MainController(a, b) {
 angular
   .module('app')
   .controller('MainController', [
-    '$scope',
-    '$rootScope',
+    '$scope', //a
+    '$rootScope', //b
     MainController
   ]);
+
+
+// other syntax:
+// function MainController(a, b) {
+//     a.name = 'Todd';
+// }
+// MainController.$inject = ['$scope', '$rootScope'];
+// angular
+//     .module('app')
+//     .controller('MainController', MainController);
