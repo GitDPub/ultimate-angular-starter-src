@@ -11,9 +11,27 @@
   <body>
     <div ng-controller="MoviesController as movies">
       <ul>
-        <li
-          ng-class="movie.year < 1995 ? 'old' : 'modern'"
-          ng-repeat="movie in movies.favorites">
+        <!--<li-->
+          <!--ng-class="{-->
+            <!--old: movie.year < 1995,-->
+            <!--moddern: movie.year > 1995 && movie.year < 2000,-->
+            <!--new: movie.year > 2000-->
+          <!--}"-->
+          <!--ng-repeat="movie in movies.favorites">-->
+          <!--<p>{{ movie.title }}</p>-->
+          <!--<p>Released in: {{ movie.year }}</p>-->
+        <!--</li>-->
+
+
+        <!--class name with complex names use quotes-->
+        <!--<li ng-class="'item__box&#45;&#45;single':expression"-->
+            <!--ng-repeat="movie in movies.favorites">-->
+          <!--<p>{{ movie.title }}</p>-->
+          <!--<p>Released in: {{ movie.year }}</p>-->
+        <!--</li>-->
+
+        <li ng-class="movie.year < 1995 ? 'old' : 'modern'"
+            ng-repeat="movie in movies.favorites">
           <p>{{ movie.title }}</p>
           <p>Released in: {{ movie.year }}</p>
         </li>
