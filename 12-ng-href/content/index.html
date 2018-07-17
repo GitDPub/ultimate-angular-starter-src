@@ -21,6 +21,9 @@
             new: movie.year > 2000
           }"
           ng-repeat="movie in movies.favorites">
+          <!--angular compile process run after the browser is loaded-->
+          <!--src and href will start download before angular arrives-->
+          <!--that's why it is used ng-src and ng-href-->
           <img ng-src="//ia.media-imdb.com/images/{{movie.img}}" alt="">
           <a ng-href="//imdb.com/title/{{movie.imdb}}" target="_blank">
             {{ movie.title }}
