@@ -15,6 +15,23 @@
           'Nothing here'
         }}
       </p>
+      <p>
+        <!--nothing to show-->
+        {{ main.doesNotExist}}
+      </p>
+      <br>
+      <br>
+      <br>
+      <a href="" ng-click="myKey = 'one'">
+        Key one
+      </a>
+      <a href="" ng-click="myKey = 'two'">
+        Key two
+      </a>
+      <p>
+        {{ main.myObject[myKey] }}
+      </p>
+
     </div>
 
     <script src="js/app.js"></script>
