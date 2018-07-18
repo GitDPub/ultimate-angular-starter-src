@@ -9,9 +9,15 @@
         type="text"
         placeholder="Search by year"
         ng-model="search">
+      <a href="" ng-click="type = 'year'">Year</a>
+      <a href="" ng-click="type = 'title'">Title</a>
+      <a href=""></a>
       <ul>
-        <li
-          ng-repeat="movie in movies.favorites | filter: { year: search }">
+        <li ng-repeat="movie in movies.favorites | orderBy: 'type'">
+        <!--<li ng-repeat="movie in movies.favorites | orderBy: 'year': true">-->
+        <!--<li ng-repeat="movie in movies.favorites | orderBy: '-year'">-->
+        <!--<li ng-repeat="movie in movies.favorites | filter: { year: search }">-->
+          <!--check angular documentation-->
           <p>{{ movie.title }}</p>
           <p>Released in: {{ movie.year }}</p>
         </li>
